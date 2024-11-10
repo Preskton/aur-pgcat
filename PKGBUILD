@@ -2,7 +2,7 @@
 
 pkgname=pgcat
 pkgver=0.2.4
-pkgrel=2
+pkgrel=3
 pkgdesc="PostgreSQL pooler with sharding, load balancing and failover support."
 arch=('x86_64')
 url="https://github.com/postgresml/pgcat"
