@@ -2,7 +2,7 @@
 
 pkgname=pgcat
 pkgver=0.2.4
-pkgrel=3
+pkgrel=4
 pkgdesc="PostgreSQL pooler with sharding, load balancing and failover support."
 arch=('x86_64')
 url="https://github.com/postgresml/pgcat"
@@ -12,9 +12,7 @@ makedepends=('cargo')
 source=(
   "$pkgname-$pkgver.tar.gz::https://github.com/postgresml/$pkgname/archive/refs/tags/$pkgname-$pkgver.tar.gz"
 )
-sha512sums=(
-  'a316877f1ca79282bfb6005856a84963d356f89045d56cdd9fc4824f2fc1028988256303a1ed4d40dceead7bc2dc990c5bbdccbaa231825702331ac7184df6cf'
-)
+sha512sums=('a316877f1ca79282bfb6005856a84963d356f89045d56cdd9fc4824f2fc1028988256303a1ed4d40dceead7bc2dc990c5bbdccbaa231825702331ac7184df6cf')
 options=(!lto)
 
 build() {

@@ -17,3 +17,7 @@ clean:
 	rm -rf ./pkg
 	rm -rf ./src
 	rm -rf ./pgcat*.*
+
+.PHONY: sums
+sums:
+	updpkgsums
