@@ -1,6 +1,11 @@
+[![AUR Version](https://img.shields.io/aur/version/pgcat)](https://aur.archlinux.org/packages/pgcat)
 # AUR pgcat
 
 Arch Linux AUR package that installs installs [`pgcat`](https://github.com/postgresml/pgcat), a PostgreSQL pooler with sharding, load balancing and failover support.
+
+## Git Mirrors
+
+- https://github.com/Preskton/aur-pgcat
 
 ## Contributing
 
