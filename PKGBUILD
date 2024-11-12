@@ -1,8 +1,8 @@
 # Maintainer: Esk <esk@esk.lol>
 
 pkgname=pgcat
-pkgver=0.2.4
-pkgrel=4
+pkgver=1.2.0
+pkgrel=1
 pkgdesc="PostgreSQL pooler with sharding, load balancing and failover support."
 arch=('x86_64')
 url="https://github.com/postgresml/pgcat"
@@ -10,19 +10,19 @@ license=('MIT')
 depends=('gcc-libs')
 makedepends=('cargo')
 source=(
-  "$pkgname-$pkgver.tar.gz::https://github.com/postgresml/$pkgname/archive/refs/tags/$pkgname-$pkgver.tar.gz"
+  "$pkgname-$pkgver.tar.gz::https://github.com/postgresml/$pkgname/archive/refs/tags/v$pkgver.tar.gz"
 )
-sha512sums=('a316877f1ca79282bfb6005856a84963d356f89045d56cdd9fc4824f2fc1028988256303a1ed4d40dceead7bc2dc990c5bbdccbaa231825702331ac7184df6cf')
+sha512sums=('c8aeeaa0cb9125e8e5cd541421e2478560b740353337d13e5f4b5896ba044b683006272f72a5fb65649f1ef286d1c837103f503b9e1826c35f3dbeeeffa886cd')
 options=(!lto)
 
 build() {
-  cd "$pkgname-$pkgname-$pkgver"
+  cd "$pkgname-$pkgver"
 
   cargo build --release --locked
 }
 
 package() {
-  cd "$pkgname-$pkgname-$pkgver"
+  cd "$pkgname-$pkgver"
 
   install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
   install -Dm640 "pgcat.minimal.toml" "$pkgdir/etc/pgcat.toml"
